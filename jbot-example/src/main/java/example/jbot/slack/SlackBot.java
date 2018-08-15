@@ -78,6 +78,14 @@ public class SlackBot extends Bot {
                 "Fourth group: " + matcher.group(3));
     }
 
+
+    @Controller(events = EventType.PONG)
+    public void sendChirpMessage(WebSocketSession session, Event event) {
+        logger.info("PONG received now send CHIRP *******************************************************");
+        event.setChannelId("DC8ETFZNG");
+        reply(session, event, "fear the CHIRP");
+    }
+
     /**
      * Invoked when an item is pinned in the channel.
      *
