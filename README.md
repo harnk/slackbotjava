@@ -7,3 +7,8 @@
 4. Run the example application by running `JBotApplication` in your IDE or via commandline: 
     ```bash
     $ cd slackbotjava
+    $ mvn clean install
+    $ cd jbot-example
+    $ mvn spring-boot:run
+    
+    
